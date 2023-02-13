@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>3D box creat in HTML & CSS</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="cubes">
+      <div class="container">
+        <div class="topface"></div>
+        <div class="shadow"></div>
+        <div class="cube">
+          <span style="--i:1;"></span>
+          <span style="--i:2;"></span>
+          <span style="--i:3;"></span>
+          <span style="--i:4;"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script >
+    const container = document.querySelector(".container");
+    let rotating = true;
+
+    container.addEventListener("click", function() {
+      if (rotating) {
+        container.style.animation = "none";
+        rotating = false;
+      } else {
+        container.style.animation = "animate 6s linear infinite";
+        rotating = true;
+      }
+    });
+  </script>
+</html>
